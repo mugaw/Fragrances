@@ -1,0 +1,61 @@
+
+> my-app@0.0.0 lint
+> eslint .
+
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\components\ui\badge.tsx
+  46:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\components\ui\button-group.tsx
+  82:3  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\components\ui\button.tsx
+  62:18  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\components\ui\form.tsx
+  159:3  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\components\ui\navigation-menu.tsx
+  167:3  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\components\ui\sidebar.tsx
+  611:26  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\components\ui\sidebar.tsx:611:26
+  609 |   // Random width between 50 to 90%.
+  610 |   const width = React.useMemo(() => {
+> 611 |     return `${Math.floor(Math.random() * 40) + 50}%`
+      |                          ^^^^^^^^^^^^^ Cannot call impure function
+  612 |   }, [])
+  613 |
+  614 |   return (  react-hooks/purity
+  725:3   error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-refresh/only-export-components
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\components\ui\toggle.tsx
+  45:18  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\context\CartContext.tsx
+  90:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\pages\CollectionPage.tsx
+  31:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\muham\OneDrive\Desktop\Fragrances\app\src\pages\CollectionPage.tsx:31:7
+  29 |     const family = searchParams.get('family');
+  30 |     if (family) {
+> 31 |       setActiveFilter(family);
+     |       ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |     }
+  33 |   }, [searchParams]);
+  34 |  react-hooks/set-state-in-effect
+
+✖ 10 problems (10 errors, 0 warnings)
+
