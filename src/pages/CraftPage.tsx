@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { getAssetPath } from '@/lib/paths';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,29 +9,25 @@ const craftSections = [
     title: 'The Philosophy',
     content:
       'Every fragrance begins with a question: What memory should this evoke? We compose not to overwhelm, but to accompany—to become an invisible signature that lingers in rooms after you\'ve left them.',
-    image: getAssetPath('/images/hero_garden.jpg'),
-
+    image: '/images/hero_garden.jpg',
   },
   {
     title: 'Ingredient Sourcing',
     content:
       'We travel to the origins of scent: rose fields in Grasse, sandalwood forests in Mysore, vanilla orchids in Madagascar. Each ingredient is selected for its character, its story, and its ability to harmonize.',
-    image: getAssetPath('/images/scent_floral.jpg'),
-
+    image: '/images/scent_floral.jpg',
   },
   {
     title: 'The Art of Blending',
     content:
       'Our perfumers work in small batches, layering notes like brushstrokes. A fragrance may undergo hundreds of iterations before the balance feels inevitable—like it always existed, waiting to be discovered.',
-    image: getAssetPath('/images/macro_bottle_detail.jpg'),
-
+    image: '/images/macro_bottle_detail.jpg',
   },
   {
     title: 'Bottle Design',
     content:
       'The vessel matters. Each bottle is designed to catch light, to feel substantial in the hand, to deserve its place on a vanity. We collaborate with glass artisans to create forms that echo the fragrance within.',
-    image: getAssetPath('/images/bottle_silhouette.jpg'),
-
+    image: '/images/bottle_silhouette.jpg',
   },
 ];
 
@@ -108,7 +102,7 @@ export function CraftPage() {
       >
         <div className="absolute inset-0">
           <img
-            src={getAssetPath("/images/boutique_interior.jpg")}
+            src="/images/boutique_interior.jpg"
             alt="Atelier"
             className="w-full h-full object-cover"
           />

@@ -4,9 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { useCart } from '@/context/CartContext';
-import { getAssetPath } from '@/lib/paths';
 import { Gift, Package, Sparkles, Plus } from 'lucide-react';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -116,8 +114,7 @@ export function GiftingPage() {
       description: set.description,
       price: set.price,
       size: 'Set',
-      image: getAssetPath('/images/gift_box.jpg'),
-
+      image: '/images/gift_box.jpg',
       family: 'floral' as const,
       notes: { top: [], heart: [], base: [] },
       concentration: 'eau_de_parfum' as const,
@@ -134,7 +131,7 @@ export function GiftingPage() {
       >
         <div className="absolute inset-0">
           <img
-            src={getAssetPath("/images/gift_box.jpg")}
+            src="/images/gift_box.jpg"
             alt="Gift box"
             className="w-full h-full object-cover"
           />
@@ -233,7 +230,7 @@ export function GiftingPage() {
           </div>
           <div className="aspect-[4/3] overflow-hidden">
             <img
-              src={getAssetPath("/images/lineup_three_bottles.jpg")}
+              src="/images/lineup_three_bottles.jpg"
               alt="Packaging"
               className="w-full h-full object-cover"
             />

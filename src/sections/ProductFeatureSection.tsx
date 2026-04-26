@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { Product } from '@/types';
-import { getAssetPath } from '@/lib/paths';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -144,7 +142,7 @@ export function ProductFeatureSection({
         }`}
       >
         <img
-          src={getAssetPath(product.image)}
+          src={product.image}
           alt={product.name}
           className="w-full h-auto object-contain max-h-[70vh]"
         />

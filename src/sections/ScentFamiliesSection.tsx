@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { scentFamilies } from '@/data/products';
-import { getAssetPath } from '@/lib/paths';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,7 +91,7 @@ export function ScentFamiliesSection() {
               {/* Image */}
               <div className="aspect-square overflow-hidden">
                 <img
-                  src={getAssetPath(family.image)}
+                  src={family.image}
                   alt={family.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

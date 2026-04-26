@@ -2,8 +2,6 @@ import { useRef, useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { getAssetPath } from '@/lib/paths';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,7 +94,7 @@ export function GiftingSection() {
         className="absolute inset-0 z-[1] will-change-transform"
       >
         <img
-          src={getAssetPath("/images/gift_box.jpg")}
+          src="/images/gift_box.jpg"
           alt="Gift box"
           className="w-full h-full object-cover"
         />

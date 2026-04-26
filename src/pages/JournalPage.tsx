@@ -2,8 +2,6 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Clock, Droplets, Sun } from 'lucide-react';
-import { getAssetPath } from '@/lib/paths';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,7 +98,7 @@ export function JournalPage() {
       >
         <div className="absolute inset-0">
           <img
-            src={getAssetPath("/images/botanical_silhouette.png")}
+            src="/images/botanical_silhouette.png"
             alt="Botanical"
             className="w-full h-full object-contain opacity-10"
           />

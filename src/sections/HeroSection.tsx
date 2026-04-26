@@ -2,8 +2,6 @@ import { useEffect, useRef, useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { getAssetPath } from '@/lib/paths';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -152,7 +150,7 @@ export function HeroSection() {
         className="absolute inset-0 z-[1] will-change-transform"
       >
         <img
-          src={getAssetPath("/images/hero_garden.jpg")}
+          src="/images/hero_garden.jpg"
           alt="Night garden"
           className="w-full h-full object-cover"
         />

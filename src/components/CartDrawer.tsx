@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { X, Plus, Minus, ShoppingBag } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
-import { getAssetPath } from '@/lib/paths';
 import gsap from 'gsap';
-
 
 export function CartDrawer() {
   const { items, isOpen, closeCart, updateQuantity, removeItem, totalPrice } = useCart();
@@ -110,7 +108,7 @@ export function CartDrawer() {
                     className="flex gap-4 pb-6 border-b border-luxury-ivory/10"
                   >
                     <img
-                      src={getAssetPath(item.product.image)}
+                      src={item.product.image}
                       alt={item.product.name}
                       className="w-20 h-24 object-cover"
                     />

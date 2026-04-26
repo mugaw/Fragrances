@@ -4,8 +4,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { getProductById, products } from '@/data/products';
 import { useCart } from '@/context/CartContext';
-import { getAssetPath } from '@/lib/paths';
-
 import { ArrowLeft, Plus, Check } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -121,7 +119,7 @@ export function ProductDetailPage() {
             className="aspect-[3/4] bg-luxury-charcoal/50 overflow-hidden"
           >
             <img
-              src={getAssetPath(product.image)}
+              src={product.image}
               alt={product.name}
               className="w-full h-full object-cover"
             />
@@ -243,7 +241,7 @@ export function ProductDetailPage() {
             >
               <div className="w-32 h-40 flex-shrink-0 overflow-hidden">
                 <img
-                  src={getAssetPath(p.image)}
+                  src={p.image}
                   alt={p.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

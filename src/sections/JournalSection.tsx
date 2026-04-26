@@ -2,8 +2,6 @@ import { useRef, useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { getAssetPath } from '@/lib/paths';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,7 +93,7 @@ export function JournalSection() {
         className="absolute right-[5vw] top-1/2 -translate-y-1/2 z-[1] opacity-0"
       >
         <img
-          src={getAssetPath("/images/botanical_silhouette.png")}
+          src="/images/botanical_silhouette.png"
           alt="Botanical silhouette"
           className="w-[30vw] max-w-md h-auto"
         />

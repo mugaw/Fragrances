@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { products } from '@/data/products';
-import { getAssetPath } from '@/lib/paths';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -139,7 +137,7 @@ export function CompleteLineSection() {
           >
             <div className="relative overflow-hidden mb-4">
               <img
-                src={getAssetPath(product.image)}
+                src={product.image}
                 alt={product.name}
                 className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
               />
